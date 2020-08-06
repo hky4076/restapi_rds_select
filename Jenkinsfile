@@ -7,6 +7,7 @@
 // def ecr_url       = "847322629192.dkr.ecr.ap-northeast-2.amazonaws.com"
 def git_url       = "https://github.com/hky4076/bff_actl.git"
 def ecr_url	  = "592806604814.dkr.ecr.eu-west-1.amazonaws.com/ds05624-bff-atcl"
+def aws_regioin	  = "eu-west-1"
 
 def ecr_repo      = "ds05624-restapi"
 def docker_ver    = "1.0"
@@ -53,9 +54,9 @@ podTemplate(label: label, cloud: 'kubernetes', serviceAccount: 'jenkins', // nod
 
                 stage('ECR Login') {
                         container('awscli') {
-							sh "aws ecr get-login-password --region ap-northeast-2"
-							ecr_cred = sh(script: 'aws ecr get-login-password --region ap-northeast-2', returnStdout: true)
-							sh "echo ${ecr_cred}"
+				sh "aws ecr get-login-password --region ${aws_region}"
+				ecr_cred = sh(script: 'aws ecr get-login-password --region ap-northeast-2', returnStdout: true)
+				sh "echo ${ecr_cred}"
                         }
                 }
 
