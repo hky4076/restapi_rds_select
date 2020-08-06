@@ -3,10 +3,12 @@
 // [ Jenkins Parameter ]
 // 01 - GIT_CREDENTIAL ( GitLab ID/PWD )
 //===============================================================================================
+// def git_url       = "https://github.com/meditch05/bff_atcl.git"
+// def ecr_url       = "847322629192.dkr.ecr.ap-northeast-2.amazonaws.com"
+def git_url       = "https://github.com/hky4076/bff_actl.git"
+def ecr_url	  = "592806604814.dkr.ecr.eu-west-1.amazonaws.com/ds05624-bff-atcl"
 
-def git_url       = "https://github.com/meditch05/restapi_rds_select.git"
-def ecr_url       = "847322629192.dkr.ecr.ap-northeast-2.amazonaws.com"
-def ecr_repo      = "restapi"
+def ecr_repo      = "ds05624-restapi"
 def docker_ver    = "1.0"
 def namespace     = "test"
 def app           = "restapi_rds_select"
