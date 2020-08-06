@@ -6,7 +6,7 @@
 // def git_url       = "https://github.com/meditch05/bff_atcl.git"
 // def ecr_url       = "847322629192.dkr.ecr.ap-northeast-2.amazonaws.com"
 def git_url       = "https://github.com/hky4076/bff_actl.git"
-def ecr_url	  = "592806604814.dkr.ecr.eu-west-1.amazonaws.com/ds05624-bff-atcl"
+def ecr_url	  = "592806604814.dkr.ecr.eu-west-1.amazonaws.com"
 def aws_region	  = "eu-west-1"
 
 def ecr_repo      = "ds05624-restapi"
